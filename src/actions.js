@@ -329,12 +329,14 @@ module.exports = {
 					id: 'controlValue',
 					tooltip: 'Value between 0-10000.',
 					default: '0',
+					useVariables: true,
 					//regex: self.REGEX_NUMBER,
 				},
 			],
 			callback: async function (action, bank) {
 				let opt = action.options;
-				let cmd = self.makeControlCommand(self.Controls.SHADOW_LEV, opt.controlValue);
+				let value = await self.parseVariablesInString(opt.controlValue);
+				let cmd = self.makeControlCommand(self.Controls.SHADOW_LEV, value);
 				self.sendCommand(cmd);
 			}
 		};

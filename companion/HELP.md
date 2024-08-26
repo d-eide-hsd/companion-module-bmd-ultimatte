@@ -2,6 +2,8 @@
 
 This module was designed for the Blackmagic Design Ultimatte 12. There is not an ethernet protocol with earlier versions.
 
+This version is a test for adding rotary button input.
+
 ## Sponsored By
 Module development sponsored by Stream Works [streamworks.ae](streamworks.ae)
 
